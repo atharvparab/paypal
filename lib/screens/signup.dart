@@ -5,7 +5,13 @@ import 'package:paypal/utils/constants.dart';
 import 'package:paypal/shared/custom_field.dart';
 import 'package:paypal/shared/rounded_button.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends StatefulWidget {
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  final _formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,30 +40,179 @@ class Signup extends StatelessWidget {
                       height: 32,
                     ),
 
-                    CustomField(
-                      hintText: "Fullname",
-                      iconData: Icons.person_outline,
+                    Form(
+                      key: _formkey,
+                    
+                      child: Column(
+                        children: <Widget>[TextFormField(
+                          decoration:InputDecoration(labelText: "Full Name",icon: Icon(Icons.person,color: kPrimaryColor),
+                          enabledBorder: UnderlineInputBorder(      
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),  
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                         ),
+                         
+                          
+                        
+                        ),
+                        
+                        SizedBox(
+                      height: 15,
+                        ),
+
+                        TextFormField(
+                          decoration:InputDecoration(labelText: "Email",icon: Icon(Icons.email,color: kPrimaryColor),
+                          enabledBorder: UnderlineInputBorder(      
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),  
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                         ),
+                         
+                          
+                        
+                        ),
+
+                        SizedBox(
+                      height: 15,
+                        ),
+
+                        TextFormField(
+                          decoration:InputDecoration(labelText: "Mobile No.",icon: Icon(Icons.phone,
+                          color: kPrimaryColor),
+                          enabledBorder: UnderlineInputBorder(      
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),  
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                         ),
+                        ),
+
+                        SizedBox(
+                      height: 15,
+                        ),
+
+                        TextFormField(
+                          decoration:InputDecoration(labelText: "Password",icon: Icon(Icons.lock,color: kPrimaryColor),
+                          enabledBorder: UnderlineInputBorder(      
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),  
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                         ),
+                         
+                          
+                        
+                        ),
+                      SizedBox(
+                      height: 15,
+                      ),
+
+                        TextFormField(
+                          decoration:InputDecoration(labelText: "Confirm Password",icon: Icon(Icons.lock,color: kPrimaryColor),
+                          enabledBorder: UnderlineInputBorder(      
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),  
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                                border: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: kPrimaryColor,
+                                    width: 2,  
+                                  ),
+                                ),
+                         ),
+                         
+                          
+                        
+                        ),
+                        SizedBox(
+                      height: 15,
+                        ),
+
+                        ] 
+                      ),
                     ),
 
-                    CustomField(
-                      hintText: "Email",
-                      iconData: Icons.alternate_email,
-                    ),
+                    // CustomField(
+                    //   hintText: "Email",
+                    //   iconData: Icons.alternate_email,
+                    // ),
 
-                    CustomField(
-                      hintText: "Mobile number",
-                      iconData: Icons.phone,
-                    ),
+                    // CustomField(
+                    //   hintText: "Mobile number",
+                    //   iconData: Icons.phone,
+                    // ),
 
-                    CustomField(
-                      hintText: "Create your password",
-                      iconData: Icons.lock_outline,
-                    ),
+                    // CustomField(
+                    //   hintText: "Create your password",
+                    //   iconData: Icons.lock_outline,
+                    // ),
 
-                    CustomField(
-                      hintText: "Confirm your password",
-                      iconData: Icons.lock_outline,
-                    ),
+                    // CustomField(
+                    //   hintText: "Confirm your password",
+                    //   iconData: Icons.lock_outline,
+                    // ),
 
                     SizedBox(
                       height: 32,
