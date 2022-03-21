@@ -9,6 +9,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: Colors.white,
       body: SafeArea(
         child: CustomScrollView(
@@ -20,7 +21,9 @@ class Login extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    
+                    Center(
+                      child: Image.asset('assets/images/paypal_logo.png',height: 75, width: 75),
+                    ),
                     Text(
                       "Log In",
                       style: TextStyle(
@@ -42,6 +45,7 @@ class Login extends StatelessWidget {
                     CustomField(
                       hintText: "Password",
                       iconData: Icons.lock_outline,
+                      
                     ),
 
                     SizedBox(
@@ -63,7 +67,7 @@ class Login extends StatelessWidget {
                     ),
 
                     Text(
-                      "Nice to have you back, it's time to start shopping, thousands of stores are waiting for you.",
+                      "Thank you for choosing Paypal.",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: kGreyColor,
